@@ -1,4 +1,4 @@
-# Labelicious 🏷️
+# Labelicious 🍩
 
 [![Build Status](https://github.com/hopeman15/labelicious/actions/workflows/main.yml/badge.svg?event=push)](https://github.com/hopeman15/labelicious/actions)
 [![License](https://img.shields.io/dub/l/vibe-d.svg)](LICENSE)

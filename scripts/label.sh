@@ -6,8 +6,8 @@ GITHUB_TOKEN="${GITHUB_TOKEN:?GITHUB_TOKEN is not set}"
 PR_NUMBER="${PR_NUMBER:?PR_NUMBER is not set}"
 REPO="${REPO:?REPO is not set}"
 
-KEYWORDS="${KEYWORDS:-Bug,CI/CD,Dependencies,Dependency,Documentation,Enhancement,Feature,Housekeeping,Refactoring,Release,Testing}"
-LABELS="${LABELS:-bug :bug:,CI/CD :cd:,dependencies,dependencies,documentation :book:,enhancement :sparkles:,feature :moneybag:,housekeeping :broom:,housekeeping :broom:,release :tada:,testing :test_tube:}"
+KEYWORDS="${KEYWORDS:-Bug,CI/CD,Dependencies,Dependency,Documentation,Enhancement,Feature,Fix,Housekeeping,Refactoring,Release,Testing}"
+LABELS="${LABELS:-bug :bug:,CI/CD :cd:,dependencies,dependencies,documentation :book:,enhancement :sparkles:,feature :moneybag:,bug :bug:,housekeeping :broom:,housekeeping :broom:,release :tada:,testing :test_tube:}"
 
 PR_TITLE=$(gh pr view "$PR_NUMBER" -R "$REPO" --json title -q '.title')
 

@@ -1,6 +1,10 @@
 name: 'Labelicious'
 description: 'Auto label pull requests based on the title.'
 
+branding:
+  color: 'purple'
+  icon: 'bookmark'
+
 inputs:
   keywords:
     description: 'A list of comma-separated keywords.'

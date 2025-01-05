@@ -42,14 +42,14 @@ arguments.
 
 ### Default Labeling
 
-| Keyword                   | Label                 |
-|---------------------------|-----------------------|
-| Bug, Fix                  | bug :bug:             |
-| CI/CD                     | CI/CD :cd:            |
-| Dependency, Dependencies  | dependencies          |
-| Documentation             | documentation :book:  |
-| Enhancement               | enhancement :sparkles |
-| Feature                   | feature :moneybag:    |
-| Housekeeping, Refactoring | housekeeping :broom:  |
-| Release                   | release :tada:        |
-| Testing                   | testing :test_tube:   |
+| Keyword                   | Label                  |
+|---------------------------|------------------------|
+| Bug, Fix                  | bug :bug:              |
+| CI/CD                     | CI/CD :cd:             |
+| Dependency, Dependencies  | dependencies           |
+| Documentation             | documentation :book:   |
+| Enhancement               | enhancement :sparkles: |
+| Feature                   | feature :moneybag:     |
+| Housekeeping, Refactoring | housekeeping :broom:   |
+| Release                   | release :tada:         |
+| Testing                   | testing :test_tube:    |

@@ -1,10 +1,10 @@
-# Auto Labeler 🏷️
+# Labelicious 🏷️
 
-[![Build Status](https://github.com/hopeman15/auto-labeler/actions/workflows/main.yml/badge.svg?event=push)](https://github.com/hopeman15/auto-labeler/actions)
+[![Build Status](https://github.com/hopeman15/labelicious/actions/workflows/main.yml/badge.svg?event=push)](https://github.com/hopeman15/labelicious/actions)
 [![License](https://img.shields.io/dub/l/vibe-d.svg)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-Auto labeler labels pull requests based on keywords found in the PR title.
+Labelicious labels pull requests based on keywords found in the PR title.
 
 ## Usage
 
@@ -23,7 +23,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Labeling
-        uses: hopeman15/auto-labeler@0.1.0
+        uses: hopeman15/labelicious@0.1.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

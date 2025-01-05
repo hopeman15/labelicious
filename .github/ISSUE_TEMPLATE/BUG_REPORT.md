@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 Your issue may have been reported already. Please have a quick look in the
-[issues](https://github.com/hopeman15/auto-labeler/issues) before creating a new
+[issues](https://github.com/hopeman15/labelicious/issues) before creating a new
 one.
 
 **Observed Behavior**

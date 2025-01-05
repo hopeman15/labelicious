@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Help make Auto Labeler better by creating a feature request.
+about: Help make Labelicious better by creating a feature request.
 title: ''
 labels: 'feature :moneybag:'
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 Your feature request may already be reported! Please have a quick look in the
-[issues](https://github.com/hopeman15/auto-labeler/issues) before creating
+[issues](https://github.com/hopeman15/labelicious/issues) before creating
 a new one.
 
 **Description**

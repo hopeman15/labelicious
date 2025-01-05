@@ -1,0 +1,22 @@
+name: 'Auto Labeler'
+description: 'Auto label pull requests based on the title.'
+
+inputs:
+  keywords:
+    description: 'A list of comma-separated keywords.'
+    required: false
+  labels:
+    description: 'A list of comma-separated labels.'
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Auto labeling
+      shell: bash
+      env:
+        PR_NUMBER: ${{ github.event.number }}
+        REPO: ${{ github.repository_owner }}/${{ github.event.repository.name }}
+        KEYWORDS: ${{ inputs.keywords }}
+        LABELS: ${{ inputs.labels }}
+      run: ${{ github.action_path }}scripts/label.sh

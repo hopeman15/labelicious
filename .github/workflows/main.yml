@@ -1,4 +1,4 @@
-name: Auto Labeler 🏷️
+name: Labelicious 🍩
 
 on:
   pull_request:

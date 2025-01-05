@@ -19,4 +19,4 @@ runs:
         REPO: ${{ github.repository_owner }}/${{ github.event.repository.name }}
         KEYWORDS: ${{ inputs.keywords }}
         LABELS: ${{ inputs.labels }}
-      run: ${{ github.action_path }}scripts/label.sh
+      run: ${{ github.action_path }}/scripts/label.sh

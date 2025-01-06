@@ -1,3 +1,3 @@
 lint:
-	shellcheck scripts/*.sh
+	shellcheck src/*.sh
 .PHONY: lint

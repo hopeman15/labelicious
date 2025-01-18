@@ -1,5 +1,9 @@
 #!/usr/bin/env bats
-
+#
+# variable changes will be discarded. all tests run in subshells.
+# shellcheck disable=SC2030
+# shellcheck disable=SC2031
+#
 setup() {
     TEST_BREW_PREFIX="$(brew --prefix)"
     load "${TEST_BREW_PREFIX}/lib/bats-support/load.bash"

@@ -35,12 +35,19 @@ jobs:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: Install Bats
+      - name: Install Bats & Kcov
         run: |
           brew install bats-core 
           brew tap bats-core/bats-core
           brew install bats-support
-          brew install bats-assert 
+          brew install bats-assert
+          brew install kcov
 
       - name: Test
-        run: make test
+        run: make test-with-coverage
+
+      - name: Report
+        uses: codecov/codecov-action@v5.4.3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+

@@ -4,5 +4,8 @@
 *.iws
 .idea/
 
+# Reports
+coverage
+
 # Misc
 .DS_Store

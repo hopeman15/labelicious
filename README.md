@@ -1,6 +1,7 @@
 # Labelicious 🍩
 
 [![Build Status](https://github.com/hopeman15/labelicious/actions/workflows/main.yml/badge.svg?event=push)](https://github.com/hopeman15/labelicious/actions)
+[![codecov](https://codecov.io/github/hopeman15/labelicious/graph/badge.svg?token=Y66XTE8OR8)](https://codecov.io/github/hopeman15/labelicious)
 [![License](https://img.shields.io/dub/l/vibe-d.svg)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 

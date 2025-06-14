@@ -24,3 +24,30 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Lint
         run: make lint
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Install Bats & Kcov
+        run: |
+          brew install bats-core 
+          brew tap bats-core/bats-core
+          brew install bats-support
+          brew install bats-assert
+          brew install kcov
+
+      - name: Test
+        run: make test-with-coverage
+
+      - name: Report
+        uses: codecov/codecov-action@v5.4.3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+

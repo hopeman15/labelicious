@@ -1,3 +1,6 @@
+all: lint test test-with-coverage
+.PHONY: all
+
 lint:
 	shellcheck src/*.sh test/*.bats scripts/*.sh
 .PHONY: lint

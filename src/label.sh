@@ -8,7 +8,7 @@ REPO="${REPO:?REPO is not set}"
 
 PR_TITLE=$(gh pr view "$PR_NUMBER" -R "$REPO" --json title -q '.title')
 
-./src/parse_labels.sh | while IFS=',' read -r keyword label; do
+"${GITHUB_ACTION_PATH}/src/parse_labels.sh" | while IFS=',' read -r keyword label; do
   if [[ "$PR_TITLE" == *"$keyword"* ]]; then
     echo "Adding label: $label for keyword: $keyword"
     gh pr edit "$PR_NUMBER" --add-label "$label" -R "$REPO"

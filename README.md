@@ -47,7 +47,7 @@ arguments.
 |---------------------------|------------------------|
 | Bug, Fix                  | bug :bug:              |
 | CI/CD                     | CI/CD :cd:             |
-| Dependency, Dependencies  | dependencies           |
+| Dependency, Dependencies  | dependencies :bricks:  |
 | Documentation             | documentation :book:   |
 | Enhancement               | enhancement :sparkles: |
 | Feature                   | feature :moneybag:     |

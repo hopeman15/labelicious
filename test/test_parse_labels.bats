@@ -19,8 +19,8 @@ setup() {
     assert_success
     assert_output --partial "Bug,bug :bug:"
     assert_output --partial "CI/CD,CI/CD :cd:"
-    assert_output --partial "Dependencies,dependencies"
-    assert_output --partial "Dependency,dependencies"
+    assert_output --partial "Dependencies,dependencies :bricks:"
+    assert_output --partial "Dependency,dependencies :bricks:"
     assert_output --partial "Documentation,documentation :book:"
     assert_output --partial "Enhancement,enhancement :sparkles:"
     assert_output --partial "Feature,feature :moneybag:"

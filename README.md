@@ -4,6 +4,7 @@
 [![codecov](https://codecov.io/github/hopeman15/labelicious/graph/badge.svg?token=Y66XTE8OR8)](https://codecov.io/github/hopeman15/labelicious)
 [![License](https://img.shields.io/dub/l/vibe-d.svg)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-v0.3.0-undefined.svg?logo=github&logoColor=white&style=flat)](https://github.com/marketplace/actions/labelicious)
 
 Labelicious labels pull requests based on keywords found in the PR title.
 

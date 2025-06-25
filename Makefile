@@ -2,7 +2,7 @@ all: lint test test-with-coverage
 .PHONY: all
 
 lint:
-	shellcheck src/*.sh test/*.bats scripts/*.sh
+	shellcheck src/*.sh test/*.bats
 .PHONY: lint
 
 test:
@@ -10,5 +10,6 @@ test:
 .PHONY: test
 
 test-with-coverage:
-	./scripts/test-with-coverage.sh
+	@kcov --bash-parser="$$(which bash)" --include-path=src coverage bats test/*.bats
+	@echo "📂 Coverage report generated: file://$$(realpath coverage/index.html)"
 .PHONY: test-with-coverage

@@ -12,6 +12,12 @@ inputs:
   labels:
     description: 'A list of comma-separated labels.'
     required: false
+  append_keywords:
+    description: 'A list of comma-separated keywords that append the defaults.'
+    required: false
+  append_labels:
+    description: 'A list of comma-separated labels that append the defaults.'
+    required: false
 
 runs:
   using: "composite"
@@ -23,4 +29,6 @@ runs:
         REPO: ${{ github.repository_owner }}/${{ github.event.repository.name }}
         KEYWORDS: ${{ inputs.keywords }}
         LABELS: ${{ inputs.labels }}
+        APPEND_KEYWORDS: ${{ inputs.append_keywords }}
+        APPEND_LABELS: ${{ inputs.append_labels }}
       run: ${{ github.action_path }}/src/label.sh

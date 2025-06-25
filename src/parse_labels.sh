@@ -5,6 +5,9 @@ set -o pipefail
 KEYWORDS="${KEYWORDS:-Bug,CI/CD,Dependencies,Dependency,Documentation,Enhancement,Feature,Fix,Housekeeping,Refactoring,Release,Testing}"
 LABELS="${LABELS:-bug :bug:,CI/CD :cd:,dependencies :bricks:,dependencies :bricks:,documentation :book:,enhancement :sparkles:,feature :moneybag:,bug :bug:,housekeeping :broom:,housekeeping :broom:,release :tada:,testing :test_tube:}"
 
+[[ -n "$APPEND_KEYWORDS" ]] && KEYWORDS+=",${APPEND_KEYWORDS}"
+[[ -n "$APPEND_LABELS" ]] && LABELS+=",${APPEND_LABELS}"
+
 IFS=',' read -ra keyword_array <<< "$KEYWORDS"
 IFS=',' read -ra label_array <<< "$LABELS"
 

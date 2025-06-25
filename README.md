@@ -62,7 +62,7 @@ You can build upon the default labeling by appending keywords and corresponding
 labels using the **append_keywords** and **append_labels** arguments.
 
 ```yaml
-- uses: hopeman15/labelicious@0.2.2
+- uses: hopeman15/labelicious@0.3.0
   with:
     append_keywords: "Movie,Documentary" # optional
     append_labels: "movie :popcorn:,documentary :movie_camera:"  # optional

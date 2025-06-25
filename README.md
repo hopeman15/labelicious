@@ -28,13 +28,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          keywords: "Movie, Documentary" # optional (see defaults below)
-          labels: "movie :popcorn:, documentary :movie_camera:" # optional (see defaults below)
+          keywords: "Movie,Documentary" # optional (see defaults below)
+          labels: "movie :popcorn:,documentary :movie_camera:" # optional (see defaults below)
 ```
 
 ## Adding Keywords and Labels
 
-You can add keywords and corresponding labels using the keywords/labels
+You can add keywords and corresponding labels using the **keywords** and **labels**
 arguments.
 
 > [!NOTE]
@@ -54,3 +54,15 @@ arguments.
 | Housekeeping, Refactoring | housekeeping :broom:   |
 | Release                   | release :tada:         |
 | Testing                   | testing :test_tube:    |
+
+## Appending Defaults
+
+You can build upon the default labeling by appending keywords and corresponding
+labels using the **append_keywords** and **append_labels** arguments.
+
+```yaml
+- uses: hopeman15/labelicious@0.2.2
+  with:
+    append_keywords: "Movie,Documentary" # optional
+    append_labels: "movie :popcorn:,documentary :movie_camera:"  # optional
+```

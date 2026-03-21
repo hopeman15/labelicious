@@ -25,7 +25,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Labeling
-        uses: hopeman15/labelicious@0.3.0
+        uses: hopeman15/labelicious@0.4.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

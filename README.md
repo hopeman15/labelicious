@@ -6,7 +6,18 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-v0.4.0-undefined.svg?logo=github&logoColor=white&style=flat)](https://github.com/marketplace/actions/labelicious)
 
-Labelicious labels pull requests based on keywords found in the PR title.
+Labelicious labels pull requests based on the [Conventional Commits](https://www.conventionalcommits.org/)
+type at the start of the PR title.
+
+A keyword matches when the title starts with it and is followed by a scope `(`,
+a breaking change `!` or a colon `:`. Matching is case-insensitive. For example,
+the keyword `feat` matches all of these titles:
+
+- `feat: add support for arrays`
+- `feat(parser): add support for arrays`
+- `feat!: drop support for node 16`
+
+It doesn't match `feature: add support` or `chore: quick feat`.
 
 ## Usage
 
@@ -29,8 +40,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          keywords: "Movie,Documentary" # optional (see defaults below)
-          labels: "movie :popcorn:,documentary :movie_camera:" # optional (see defaults below)
+          keywords: "feat,fix" # optional (see defaults below)
+          labels: "feature :moneybag:,bug :bug:" # optional (see defaults below)
 ```
 
 ## Adding Keywords and Labels
@@ -44,17 +55,16 @@ arguments.
 
 ### Default Labeling
 
-| Keyword                   | Label                  |
-|---------------------------|------------------------|
-| Bug, Fix                  | bug :bug:              |
-| CI/CD                     | CI/CD :cd:             |
-| Dependency, Dependencies  | dependencies :bricks:  |
-| Documentation             | documentation :book:   |
-| Enhancement               | enhancement :sparkles: |
-| Feature                   | feature :moneybag:     |
-| Housekeeping, Refactoring | housekeeping :broom:   |
-| Release                   | release :tada:         |
-| Testing                   | testing :test_tube:    |
+| Keyword                        | Label                  |
+|--------------------------------|------------------------|
+| build                          | dependencies :bricks:  |
+| chore, refactor, revert, style | housekeeping :broom:   |
+| ci                             | CI/CD :cd:             |
+| docs                           | documentation :book:   |
+| feat                           | feature :moneybag:     |
+| fix                            | bug :bug:              |
+| perf                           | enhancement :sparkles: |
+| test                           | testing :test_tube:    |
 
 ## Appending Defaults
 
@@ -64,6 +74,11 @@ labels using the **append_keywords** and **append_labels** arguments.
 ```yaml
 - uses: hopeman15/labelicious@0.3.0
   with:
-    append_keywords: "Movie,Documentary" # optional
-    append_labels: "movie :popcorn:,documentary :movie_camera:"  # optional
+    append_keywords: "chore(deps),chore(release)" # optional
+    append_labels: "dependencies :bricks:,release :tada:"  # optional
 ```
+
+> [!NOTE]
+> A keyword can include a scope. `chore(deps)` matches `chore(deps): update
+> actions/checkout`. That title also matches the default `chore` keyword, so it
+> gets both labels.

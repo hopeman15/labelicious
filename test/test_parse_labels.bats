@@ -11,18 +11,17 @@ load test_helper.bash
     run parse_labels.sh
 
     assert_success
-    assert_output --partial "Bug,bug :bug:"
-    assert_output --partial "CI/CD,CI/CD :cd:"
-    assert_output --partial "Dependencies,dependencies :bricks:"
-    assert_output --partial "Dependency,dependencies :bricks:"
-    assert_output --partial "Documentation,documentation :book:"
-    assert_output --partial "Enhancement,enhancement :sparkles:"
-    assert_output --partial "Feature,feature :moneybag:"
-    assert_output --partial "Fix,bug :bug:"
-    assert_output --partial "Housekeeping,housekeeping :broom:"
-    assert_output --partial "Refactoring,housekeeping :broom:"
-    assert_output --partial "Release,release :tada:"
-    assert_output --partial "Testing,testing :test_tube:"
+    assert_output --partial "build,dependencies :bricks:"
+    assert_output --partial "chore,housekeeping :broom:"
+    assert_output --partial "ci,CI/CD :cd:"
+    assert_output --partial "docs,documentation :book:"
+    assert_output --partial "feat,feature :moneybag:"
+    assert_output --partial "fix,bug :bug:"
+    assert_output --partial "perf,enhancement :sparkles:"
+    assert_output --partial "refactor,housekeeping :broom:"
+    assert_output --partial "revert,housekeeping :broom:"
+    assert_output --partial "style,housekeeping :broom:"
+    assert_output --partial "test,testing :test_tube:"
 }
 
 @test "Validate error when the number of KEYWORDS and LABELS differ" {
@@ -53,18 +52,17 @@ load test_helper.bash
     run parse_labels.sh
 
     assert_success
-    assert_output --partial "Bug,bug :bug:"
-    assert_output --partial "CI/CD,CI/CD :cd:"
-    assert_output --partial "Dependencies,dependencies :bricks:"
-    assert_output --partial "Dependency,dependencies :bricks:"
-    assert_output --partial "Documentation,documentation :book:"
-    assert_output --partial "Enhancement,enhancement :sparkles:"
-    assert_output --partial "Feature,feature :moneybag:"
-    assert_output --partial "Fix,bug :bug:"
-    assert_output --partial "Housekeeping,housekeeping :broom:"
-    assert_output --partial "Refactoring,housekeeping :broom:"
-    assert_output --partial "Release,release :tada:"
-    assert_output --partial "Testing,testing :test_tube:"
+    assert_output --partial "build,dependencies :bricks:"
+    assert_output --partial "chore,housekeeping :broom:"
+    assert_output --partial "ci,CI/CD :cd:"
+    assert_output --partial "docs,documentation :book:"
+    assert_output --partial "feat,feature :moneybag:"
+    assert_output --partial "fix,bug :bug:"
+    assert_output --partial "perf,enhancement :sparkles:"
+    assert_output --partial "refactor,housekeeping :broom:"
+    assert_output --partial "revert,housekeeping :broom:"
+    assert_output --partial "style,housekeeping :broom:"
+    assert_output --partial "test,testing :test_tube:"
     assert_output --partial "keyword-1,label-1"
     assert_output --partial "keyword-2,label-2"
 }

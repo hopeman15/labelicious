@@ -2,8 +2,8 @@
 
 set -o pipefail
 
-KEYWORDS="${KEYWORDS:-Bug,CI/CD,Dependencies,Dependency,Documentation,Enhancement,Feature,Fix,Housekeeping,Refactoring,Release,Testing}"
-LABELS="${LABELS:-bug :bug:,CI/CD :cd:,dependencies :bricks:,dependencies :bricks:,documentation :book:,enhancement :sparkles:,feature :moneybag:,bug :bug:,housekeeping :broom:,housekeeping :broom:,release :tada:,testing :test_tube:}"
+KEYWORDS="${KEYWORDS:-build,chore,ci,docs,feat,fix,perf,refactor,revert,style,test}"
+LABELS="${LABELS:-dependencies :bricks:,housekeeping :broom:,CI/CD :cd:,documentation :book:,feature :moneybag:,bug :bug:,enhancement :sparkles:,housekeeping :broom:,housekeeping :broom:,housekeeping :broom:,testing :test_tube:}"
 
 [[ -n "$APPEND_KEYWORDS" ]] && KEYWORDS+=",${APPEND_KEYWORDS}"
 [[ -n "$APPEND_LABELS" ]] && LABELS+=",${APPEND_LABELS}"

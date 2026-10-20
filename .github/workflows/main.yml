@@ -33,12 +33,13 @@ jobs:
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
 
       - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@eb02c69dbabdb66ff183c614f4ce7ab3c077592c # main
 
       - name: Install Bats & Kcov
         run: |
           brew install bats-core 
           brew tap bats-core/bats-core
+          brew trust --tap bats-core/bats-core
           brew install bats-support
           brew install bats-assert
           brew install kcov
